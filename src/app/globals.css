@@ -187,7 +187,45 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografía de títulos estilo Picknic (Clean, tracking ajustado, editorial) */
+h1, h2, h3, .hero-title {
+  letter-spacing: -0.035em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Tarjetas Minimalistas estilo Picknic (fondos neutros, bordes finos, micro-interacciones suaves) */
+.picknic-card {
+  background: #ffffff;
+  border: 1px solid rgba(228, 228, 231, 0.8);
+  border-radius: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.picknic-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(161, 161, 170, 0.7);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+/* Animaciones de entrada elegantes */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Glassmorphism helpers with dark / yellow accent */

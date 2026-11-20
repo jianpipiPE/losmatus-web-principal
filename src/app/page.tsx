@@ -35,7 +35,7 @@ export default async function HomePage() {
       content = await sanityClient.fetch<HomeData | null>(
         HOME_QUERY,
         {},
-        { cache: 'no-store' }
+        { next: { revalidate: 60 } }
       );
     } catch (error) {
       console.error("Error al consultar Sanity CMS, utilizando datos locales.", error);
