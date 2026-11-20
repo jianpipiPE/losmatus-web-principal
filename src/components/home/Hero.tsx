@@ -30,6 +30,10 @@ export function Hero({
         <div className="hero-overlay-radial absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-black/40" />
       </div>
 
+      {/* Aurora Ambient Glow (Efecto #1: Resplandor ambiental dinámico con el color de acento) */}
+      <div className="aurora-glow absolute -top-24 right-10 h-[480px] w-[480px] rounded-full z-0 pointer-events-none opacity-40 sm:opacity-50" />
+      <div className="aurora-glow absolute -bottom-32 left-1/4 h-[400px] w-[400px] rounded-full z-0 pointer-events-none opacity-20" />
+
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none z-0" />
 
@@ -37,24 +41,24 @@ export function Hero({
         <div className="grid items-center gap-12 lg:grid-cols-12">
           {/* Main Hero Copy */}
           <div className="lg:col-span-7">
-            {/* Badge */}
-            <div className="hero-badge inline-flex items-center gap-2 rounded-full border border-[#FFE500]/40 bg-black/80 px-4 py-1.5 text-xs font-bold text-[#FFE500] backdrop-blur-md">
+            {/* Badge (Animate 1) */}
+            <div className="hero-animate-1 hero-badge inline-flex items-center gap-2 rounded-full border border-[#FFE500]/40 bg-black/80 px-4 py-1.5 text-xs font-bold text-[#FFE500] backdrop-blur-md">
               <span className="flex h-2 w-2 rounded-full bg-[#FFE500] animate-ping" />
               <span>LOSMATUS S.A.C. · Ingeniería & Tecnología Empresarial</span>
             </div>
 
-            {/* Heading */}
-            <h1 className="hero-title mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.12]">
+            {/* Heading (Animate 2) */}
+            <h1 className="hero-animate-2 hero-title mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.12]">
               {title}
             </h1>
 
-            {/* Subheading */}
-            <p className="hero-subtitle mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl max-w-2xl">
+            {/* Subheading (Animate 3) */}
+            <p className="hero-animate-3 hero-subtitle mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl max-w-2xl">
               {subtitle}
             </p>
 
-            {/* Highlights bullet points */}
-            <div className="hero-text-zinc mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 text-sm text-zinc-200">
+            {/* Highlights bullet points (Animate 4) */}
+            <div className="hero-animate-4 hero-text-zinc mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 text-sm text-zinc-200">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-[#FFE500] shrink-0" />
                 <span>Cableado Cat 6 / 6A y Fibra Óptica</span>
@@ -73,8 +77,8 @@ export function Hero({
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            {/* CTAs (Animate 5) */}
+            <div className="hero-animate-5 mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/contacto"
                 className="inline-flex items-center gap-2 rounded-xl bg-[#FFE500] px-7 py-4 text-sm font-extrabold text-black shadow-lg shadow-[#FFE500]/20 transition-all hover:bg-[#F2D600] hover:scale-[1.02]"
@@ -94,8 +98,8 @@ export function Hero({
             </div>
           </div>
 
-          {/* Right Visual Dashboard Card */}
-          <div className="lg:col-span-5">
+          {/* Right Visual Dashboard Card (Animate 5) */}
+          <div className="hero-animate-5 lg:col-span-5">
             <div className="hero-ecosystem-card relative mx-auto max-w-md rounded-2xl border border-zinc-700/80 bg-zinc-900/95 p-6 shadow-2xl backdrop-blur-xl">
               <div className="flex items-center justify-between border-b border-zinc-800 pb-4">
                 <div className="flex items-center gap-3">

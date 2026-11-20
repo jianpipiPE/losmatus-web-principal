@@ -212,11 +212,11 @@ h1, h2, h3, .hero-title {
   box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05);
 }
 
-/* Animaciones de entrada elegantes */
+/* Animaciones de entrada elegantes escalonadas (Staggered Fade-in) */
 @keyframes fadeInSlideUp {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(22px);
   }
   to {
     opacity: 1;
@@ -224,8 +224,53 @@ h1, h2, h3, .hero-title {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.hero-animate-1 {
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.hero-animate-2 {
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+
+.hero-animate-3 {
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.hero-animate-4 {
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+}
+
+.hero-animate-5 {
+  opacity: 0;
+  animation: fadeInSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+/* Aurora Glow Pulsante (Resplandor ambiental dinámico) */
+@keyframes auroraPulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.15) translate(-10px, 15px);
+    opacity: 0.75;
+  }
+}
+
+.aurora-glow {
+  background: radial-gradient(
+    circle at center,
+    var(--brand-yellow) 0%,
+    color-mix(in srgb, var(--brand-yellow) 40%, transparent) 50%,
+    transparent 75%
+  );
+  filter: blur(80px);
+  animation: auroraPulse 8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 /* Glassmorphism helpers with dark / yellow accent */
