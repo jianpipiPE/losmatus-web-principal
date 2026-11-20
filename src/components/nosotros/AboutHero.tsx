@@ -3,6 +3,7 @@ import { sanityClient } from "@/lib/sanity/client";
 import { ABOUT_QUERY } from "@/lib/sanity/queries";
 
 type AboutData = {
+  etiquetaBadge?: string;
   titulo?: string;
   subtitulo?: string;
   imagenPortadaUrl?: string;
@@ -47,7 +48,7 @@ export async function AboutHero() {
       <div className="relative z-10 mx-auto max-w-7xl w-full">
         <div className="max-w-3xl">
           <span className="inline-block rounded-full bg-[#FFE500] px-4 py-1.5 text-xs font-black uppercase tracking-widest text-black">
-            Sobre LOSMATUS S.A.C.
+            {content?.etiquetaBadge || "Sobre LOSMATUS S.A.C."}
           </span>
           <h1 className="hero-title mt-5 text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">
             {title}

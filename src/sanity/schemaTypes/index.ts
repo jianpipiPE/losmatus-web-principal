@@ -90,11 +90,29 @@ const paginaInicio = defineType({
   ],
 });
 
+const paginaServicios = defineType({
+  name: "paginaServicios",
+  title: "Página Servicios",
+  type: "document",
+  fields: [
+    defineField({ name: "etiquetaBadge", title: "Etiqueta / Badge Superior", type: "string", description: "Ej: Catálogo Especializado. Por defecto: Catálogo Especializado" }),
+    defineField({ name: "titulo", title: "Título Principal", type: "string" }),
+    defineField({ name: "subtitulo", title: "Subtítulo / Descripción", type: "text" }),
+    defineField({
+      name: "imagenPortada",
+      title: "Imagen de Portada de Fondo",
+      type: "image",
+      options: { hotspot: true },
+    }),
+  ],
+});
+
 const paginaNosotros = defineType({
   name: "paginaNosotros",
   title: "Página Nosotros",
   type: "document",
   fields: [
+    defineField({ name: "etiquetaBadge", title: "Etiqueta / Badge Superior", type: "string", description: "Ej: Sobre LOSMATUS S.A.C." }),
     defineField({ name: "titulo", title: "Título Principal", type: "string" }),
     defineField({ name: "subtitulo", title: "Subtítulo / Descripción", type: "text" }),
     defineField({
@@ -108,27 +126,12 @@ const paginaNosotros = defineType({
   ],
 });
 
-const paginaServicios = defineType({
-  name: "paginaServicios",
-  title: "Página Servicios",
-  type: "document",
-  fields: [
-    defineField({ name: "titulo", title: "Título Principal", type: "string" }),
-    defineField({ name: "subtitulo", title: "Subtítulo", type: "text" }),
-    defineField({
-      name: "imagenPortada",
-      title: "Imagen de Portada de Fondo",
-      type: "image",
-      options: { hotspot: true },
-    }),
-  ],
-});
-
 const paginaContacto = defineType({
   name: "paginaContacto",
   title: "Página Contacto",
   type: "document",
   fields: [
+    defineField({ name: "etiquetaBadge", title: "Etiqueta / Badge Superior", type: "string", description: "Ej: Contáctanos" }),
     defineField({ name: "titulo", title: "Título Principal", type: "string" }),
     defineField({ name: "subtitulo", title: "Subtítulo", type: "text" }),
     defineField({

@@ -26,6 +26,7 @@ export const HOME_QUERY = defineQuery(`*[_type == "paginaInicio"][0]{
 }`);
 
 export const ABOUT_QUERY = defineQuery(`*[_type == "paginaNosotros"][0]{
+  etiquetaBadge,
   titulo,
   subtitulo,
   "imagenPortadaUrl": imagenPortada.asset->url,
@@ -34,6 +35,7 @@ export const ABOUT_QUERY = defineQuery(`*[_type == "paginaNosotros"][0]{
 }`);
 
 export const SERVICES_PAGE_QUERY = defineQuery(`*[_type == "paginaServicios"][0]{
+  etiquetaBadge,
   titulo,
   subtitulo,
   "imagenPortadaUrl": imagenPortada.asset->url,
@@ -48,6 +50,7 @@ export const SERVICES_PAGE_QUERY = defineQuery(`*[_type == "paginaServicios"][0]
 }`);
 
 export const CONTACT_PAGE_QUERY = defineQuery(`*[_type == "paginaContacto"][0]{
+  etiquetaBadge,
   titulo,
   subtitulo,
   "imagenPortadaUrl": imagenPortada.asset->url,

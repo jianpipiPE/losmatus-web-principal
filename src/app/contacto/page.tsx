@@ -6,6 +6,7 @@ import { CONTACT_PAGE_QUERY } from "@/lib/sanity/queries";
 import Image from "next/image";
 
 type ContactPageData = {
+  etiquetaBadge?: string;
   titulo?: string;
   subtitulo?: string;
   imagenPortadaUrl?: string;
@@ -56,7 +57,7 @@ export default async function ContactoPage() {
         <div className="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="rounded-full bg-[#FFE500] px-4 py-1.5 text-xs font-black uppercase tracking-widest text-black">
-              Contáctanos
+              {content?.etiquetaBadge || "Contáctanos"}
             </span>
             <h1 className="hero-title mt-5 text-4xl font-black tracking-tight sm:text-5xl">
               {content?.titulo || "Hablemos sobre tu proyecto tecnológico"}
