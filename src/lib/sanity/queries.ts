@@ -59,6 +59,15 @@ export const CONTACT_PAGE_QUERY = defineQuery(`*[_type == "paginaContacto"][0]{
   direccion
 }`);
 
+export const SUPPORT_PAGE_QUERY = defineQuery(`*[_type == "paginaSoporte"][0]{
+  etiquetaBadge,
+  titulo,
+  subtitulo,
+  "imagenPortadaUrl": imagenPortada.asset->url,
+  urlPortal,
+  textoBoton
+}`);
+
 export const SERVICES_QUERY = defineQuery(`*[_type == "servicio"] | order(orden asc){
   titulo, 
   descripcion, 

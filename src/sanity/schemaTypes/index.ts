@@ -202,12 +202,33 @@ const temaConfig = defineType({
   ],
 });
 
+const paginaSoporte = defineType({
+  name: "paginaSoporte",
+  title: "Página Soporte",
+  type: "document",
+  fields: [
+    defineField({ name: "etiquetaBadge", title: "Etiqueta / Badge Superior", type: "string", description: "Ej: Exclusivo para Clientes", initialValue: "Exclusivo para Clientes" }),
+    defineField({ name: "titulo", title: "Título Principal", type: "string", description: "Ej: Soporte Inteligente Sin interrupciones.", initialValue: "Soporte Inteligente Sin interrupciones." }),
+    defineField({ name: "subtitulo", title: "Subtítulo / Descripción", type: "text", description: "Descripción del portal cloud y mesa de ayuda", initialValue: "Acceda a nuestra plataforma cloud. Reporte incidencias, visualice el progreso en tiempo real y chatee directamente con nuestros ingenieros." }),
+    defineField({
+      name: "imagenPortada",
+      title: "Imagen de Portada de Fondo",
+      type: "image",
+      options: { hotspot: true },
+      description: "Imagen de fondo para la portada (puedes reutilizar cualquiera de los fondos existentes)",
+    }),
+    defineField({ name: "urlPortal", title: "URL del Portal de Clientes", type: "url", description: "Enlace hacia donde dirige el botón", initialValue: "https://soporte.losmatus.com/" }),
+    defineField({ name: "textoBoton", title: "Texto del Botón Principal", type: "string", description: "Ej: Entrar al Portal", initialValue: "Entrar al Portal" }),
+  ],
+});
+
 export const schemaTypes = [
   temaConfig,
   paginaInicio,
   paginaNosotros,
   paginaServicios,
   paginaContacto,
+  paginaSoporte,
   servicio,
   clienteLogo,
   brochureConfig,

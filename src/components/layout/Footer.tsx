@@ -57,6 +57,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/soporte" className="hover:text-[#FFE500] transition-colors font-semibold text-white">
+                  Soporte Cloud
+                </Link>
+              </li>
+              <li>
                 <Link href="/contacto" className="hover:text-[#FFE500] transition-colors">
                   Contacto
                 </Link>

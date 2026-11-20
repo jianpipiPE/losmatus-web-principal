@@ -10,6 +10,7 @@ const links = [
   { name: "Inicio", href: "/" },
   { name: "Nosotros", href: "/nosotros" },
   { name: "Servicios", href: "/servicios" },
+  { name: "Soporte", href: "/soporte" },
   { name: "Contacto", href: "/contacto" },
 ];
 
@@ -94,13 +95,13 @@ export function Header() {
         {/* Action Button */}
         <div className="hidden md:flex md:items-center md:gap-3">
           <a
-            href="https://wa.me/51919045761?text=Hola%20LOSMATUS,%20deseo%20solicitar%20asesor%C3%ADa%20sobre%20sus%20servicios"
+            href="https://soporte.losmatus.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-zinc-900 bg-white px-4 py-2.5 text-xs font-bold text-zinc-900 hover:bg-zinc-100 transition-colors"
+            className="flex items-center gap-2 rounded-xl border border-zinc-900 bg-zinc-950 px-4 py-2.5 text-xs font-bold text-white hover:bg-zinc-800 transition-colors"
           >
-            <MessageSquare className="h-3.5 w-3.5 text-emerald-600" />
-            WhatsApp
+            <ArrowRight className="h-3.5 w-3.5 rotate-[-45deg]" />
+            Portal Clientes
           </a>
           <Link
             href="/contacto"
@@ -138,13 +139,13 @@ export function Header() {
             ))}
             <div className="mt-4 flex flex-col gap-2 pt-4 border-t border-zinc-100">
               <a
-                href="https://wa.me/51919045761?text=Hola%20LOSMATUS,%20deseo%20solicitar%20asesor%C3%ADa%20sobre%20sus%20servicios"
+                href="https://soporte.losmatus.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl bg-zinc-900 py-3 text-sm font-bold text-[#FFE500] hover:bg-black transition-colors"
+                className="flex items-center justify-center gap-2 rounded-xl bg-zinc-950 py-3 text-sm font-bold text-white hover:bg-zinc-800 transition-colors"
               >
-                <Phone className="h-4 w-4" />
-                WhatsApp (+51 919 045 761)
+                <ArrowRight className="h-4 w-4 rotate-[-45deg]" />
+                Portal Clientes (soporte.losmatus.com)
               </a>
               <Link
                 href="/contacto"
